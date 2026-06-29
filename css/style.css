@@ -41,14 +41,14 @@
 
 html, body { height: 100%; font-family: var(--font); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow: hidden; }
 
-/* ===== 鑳屾櫙 ===== */
+/* ===== 闂佺厧鍟块張顒€鈻?===== */
 .bg-blob { position: fixed; border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(80px); opacity: 0.3; animation: blobFloat 12s ease-in-out infinite alternate; }
 .bg-blob-1 { width: 400px; height: 400px; background: radial-gradient(circle, #E84C4C, transparent); top: -100px; left: -100px; }
 .bg-blob-2 { width: 350px; height: 350px; background: radial-gradient(circle, #FF6B9D, transparent); bottom: -80px; right: -80px; animation-delay: -4s; }
 .bg-blob-3 { width: 250px; height: 250px; background: radial-gradient(circle, #FFD93D, transparent); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: -8s; opacity: 0.15; }
 @keyframes blobFloat { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, -30px) scale(1.1); } }
 
-/* ===== 澶撮儴 ===== */
+/* ===== 婵犮垼鍩栭幐鎶藉磿?===== */
 .header { position: relative; z-index: 10; background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
 .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
 .logo { display: flex; align-items: center; gap: 12px; }
@@ -63,10 +63,10 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .btn-pro { background: linear-gradient(135deg, var(--primary), #d63031); color: #fff; border: none; border-radius: var(--radius-xs); padding: 7px 16px; font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; transition: all var(--transition); box-shadow: 0 2px 8px var(--primary-glow); }
 .btn-pro:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--primary-glow); }
 
-/* ===== 涓诲竷灞€ ===== */
+/* ===== 婵炴垶鎹侀褏绮╂搴濇勃闁?===== */
 .main { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: calc(100vh - 60px); overflow: hidden; }
 
-/* ===== 闈㈡澘 ===== */
+/* ===== 闂傚倸鐗勯崹鍝勵熆?===== */
 .panel { background: var(--bg-card); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-md); display: flex; flex-direction: column; overflow: hidden; transition: box-shadow var(--transition); animation: fadeInUp 0.5s ease both; }
 .panel:hover { box-shadow: var(--shadow-lg); }
 .panel-output { animation-delay: 0.1s; }
@@ -80,7 +80,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .panel-header h2 { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: 0.3px; }
 .panel-emoji { margin-right: 2px; }
 
-/* ===== 瀛楁暟鍖哄煙 ===== */
+/* ===== 闁诲孩绋掗〃鍡涘汲閻旂厧绀岄柛婵嗗閸?===== */
 .char-area { display: flex; align-items: center; gap: 3px; font-size: 12px; color: var(--text-secondary); font-variant-numeric: tabular-nums; position: relative; }
 .char-count { color: var(--text); font-weight: 500; }
 .char-max { color: var(--text-muted); }
@@ -91,7 +91,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .char-bar-wrap { position: absolute; bottom: -3px; left: 0; right: 0; height: 2px; background: var(--border); border-radius: 1px; overflow: hidden; }
 .char-bar { height: 100%; width: 0%; background: var(--text-muted); border-radius: 1px; transition: width 0.2s ease, background 0.3s; }
 
-/* ===== 妯℃澘鏍?===== */
+/* ===== 濠碘槅鍨崜婵嗩熆濮椻偓瀵?===== */
 .template-bar { display: flex; align-items: center; gap: 8px; padding: 8px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; overflow-x: auto; }
 .template-label { font-size: 12px; color: var(--text-secondary); white-space: nowrap; font-weight: 500; flex-shrink: 0; }
 .template-list { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; flex-shrink: 0; }
@@ -110,15 +110,15 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .emoji-btn:hover { background: var(--primary-soft); border-color: var(--primary-glow); transform: scale(1.2) translateY(-2px); }
 .emoji-btn:active { transform: scale(0.95); }
 
-/* ===== 杈撳叆鍖?===== */
+/* ===== 闁哄鐗婇幐鎼佸矗閸℃稑绀?===== */
 .input-area { flex: 1; width: 100%; padding: 18px 20px; border: none; outline: none; resize: none; font-family: var(--font); font-size: 15px; line-height: 1.9; color: var(--text); background: transparent; min-height: 150px; scrollbar-width: thin; }
 .input-area::placeholder { color: var(--text-muted); font-style: italic; }
 
-/* ===== 鑷姩淇濆瓨 ===== */
+/* ===== 闂佺厧顨庢禍婊勬叏閳哄倻鈹嶆繝闈涙閹?===== */
 .auto-save-indicator { text-align: right; padding: 3px 20px 0; font-size: 11px; color: var(--success); flex-shrink: 0; opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: flex-end; gap: 3px; }
 .auto-save-indicator.show { opacity: 1; }
 
-/* ===== 宸ュ叿鏍?===== */
+/* ===== 閻庤鎮堕崕閬嶅矗閸ф鍐€?===== */
 .format-toolbar { display: flex; align-items: center; gap: 4px; padding: 8px 20px; border-top: 1px solid var(--border); flex-shrink: 0; background: var(--bg-card); flex-wrap: wrap; }
 .toolbar-group { display: flex; gap: 2px; }
 .tool-btn { background: transparent; border: 1px solid transparent; border-radius: 6px; padding: 5px 10px; cursor: pointer; font-size: 14px; color: var(--text-secondary); transition: all 0.15s; line-height: 1.4; font-family: var(--font); }
@@ -129,12 +129,12 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .tool-btn s { text-decoration: line-through; }
 .toolbar-divider { width: 1px; height: 20px; background: var(--border); margin: 0 6px; flex-shrink: 0; }
 
-/* ===== 棰勮鍖?===== */
+/* ===== 婵☆偅婢樼€氼垶锝炲澶婄?===== */
 .preview-area { flex: 1; padding: 20px; overflow-y: auto; line-height: 1.9; font-size: 15px; white-space: pre-wrap; word-wrap: break-word; scrollbar-width: thin; scrollbar-color: var(--text-muted) transparent; }
 .preview-area::-webkit-scrollbar { width: 4px; }
 .preview-area::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 2px; }
 
-/* 棰勮鏂囧瓧鏍峰紡 */
+/* 婵☆偅婢樼€氼垶锝炲澶婃闁搞儜鍛喕闂佸搫绉撮崲鑼?*/
 .preview-area strong { font-weight: 700; color: var(--text); }
 .preview-area em { font-style: italic; }
 .preview-area del { text-decoration: line-through; color: var(--text-secondary); }
@@ -145,10 +145,10 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .preview-placeholder svg { animation: gentlePulse 3s ease-in-out infinite; }
 @keyframes gentlePulse { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.03); } }
 
-/* ===== 杈撳嚭搴曢儴 ===== */
+/* ===== 闁哄鐗婇幐鎼佸吹椤撶喐鍎熼柡鍥ュ灩閸?===== */
 .output-footer { border-top: 1px solid var(--border); flex-shrink: 0; overflow-y: auto; max-height: 220px; }
 
-/* ===== 椋庢牸閫夋嫨鍣?===== */
+/* ===== 婵＄偛顑呯€涒晠鎮ч幖浣圭劵濠㈣泛顑呴銉╂煕?===== */
 .style-selector { display: flex; align-items: center; gap: 10px; padding: 10px 20px; border-bottom: 1px solid var(--border); }
 .style-label { font-size: 12px; color: var(--text-secondary); white-space: nowrap; font-weight: 500; }
 .style-options { display: flex; gap: 6px; }
@@ -158,19 +158,19 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .style-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
 .style-btn.active .style-dot { background: #fff !important; }
 
-/* ===== 琛岃窛/瀵归綈 ===== */
+/* ===== 闁荤偞绋戦惌浣虹玻?闁诲酣娼х紞濠勭礊?===== */
 .spacing-control, .alignment-control { display: flex; align-items: center; gap: 10px; padding: 8px 20px; border-bottom: 1px solid var(--border); }
 .spacing-options, .alignment-options { display: flex; gap: 4px; }
 .spacing-btn, .align-btn { background: transparent; border: 1px solid var(--border); border-radius: 4px; padding: 3px 12px; font-size: 12px; cursor: pointer; color: var(--text-secondary); transition: all 0.15s; }
 .spacing-btn:hover, .align-btn:hover { border-color: var(--primary); color: var(--primary); }
 .spacing-btn.active, .align-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
 
-/* ===== 缁熻 ===== */
+/* ===== 缂傚倷鑳堕崰鏇㈩敇?===== */
 .stats-bar { display: flex; align-items: center; gap: 6px; padding: 8px 20px; font-size: 12px; color: var(--text-secondary); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .stats-bar strong { color: var(--text); font-variant-numeric: tabular-nums; margin-left: 2px; }
 .stats-dot { color: var(--text-muted); }
 
-/* ===== 鑽夌 ===== */
+/* ===== 闂佽壈妫勯ˇ閬嶁€?===== */
 .draft-section { padding: 10px 20px 12px; }
 .draft-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .draft-count { font-size: 11px; color: var(--text-muted); }
@@ -186,7 +186,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .draft-item-del:hover { color: var(--primary); background: var(--primary-soft); }
 .draft-empty { font-size: 12px; color: var(--text-muted); text-align: center; padding: 10px; }
 
-/* ===== 澶嶅埗鎸夐挳 ===== */
+/* ===== 婵犮垼娉涚粔鎾春濡ゅ懎绠板鑸靛姈鐏?===== */
 .copy-btn { background: linear-gradient(135deg, var(--primary), #d63031); color: #fff; border: none; border-radius: var(--radius-sm); padding: 8px 18px; font-size: 13px; font-weight: 500; cursor: pointer; display: flex; align-items: center; transition: all var(--transition); box-shadow: 0 2px 8px var(--primary-glow); letter-spacing: 0.3px; flex-shrink: 0; }
 .copy-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--primary-glow); }
 .copy-btn:active { transform: translateY(0) scale(0.98); }
@@ -221,15 +221,15 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .btn-pro-subscribe:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--primary-glow); }
 .pro-note { text-align: center; font-size: 12px; color: var(--text-secondary); margin-top: 12px; }
 
-/* ===== 婊氬姩鏉?===== */
+/* ===== 濠电姴锕ラ懝鐐叏閳哄懎绾?===== */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 2px; }
 
-/* ===== 閫変腑 ===== */
+/* ===== 闂備緡鍋勯ˇ顕€鎳?===== */
 ::selection { background: var(--primary); color: #fff; }
 
-/* ===== 鍝嶅簲寮?===== */
+/* ===== 闂佸憡绻傜粔瀵歌姳閹绘帩鍤?===== */
 @media (max-width: 820px) {
   .main { grid-template-columns: 1fr; height: auto; overflow: auto; padding: 16px; }
   .panel { min-height: 300px; }
@@ -245,7 +245,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 }
 
 
-/* ===== 瀵煎嚭鍥剧墖鎸夐挳 ===== */
+/* ===== 闁诲海鏁搁崢褔宕甸銏犵倞闁告挆鍐炬毈闂佸湱顭堥ˇ鐢稿箰?===== */
 .header-actions-right {
   display: flex;
   align-items: center;
@@ -268,7 +268,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .export-btn:active {
   transform: scale(0.98);
 }
-/* ===== 使用次数栏 ===== */
+/* ===== 濞达綀娉曢弫銈呪枎閳╁啯娈堕柡?===== */
 .usage-bar {
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 20px; font-size: 12px; color: var(--text-secondary);
@@ -281,7 +281,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 }
 .usage-upgrade:hover { opacity: 0.7; }
 
-/* ===== Pro 状态徽章 ===== */
+/* ===== Pro 闁绘鍩栭埀顑跨缁愭绮?===== */
 .pro-status { text-align: center; margin-bottom: 16px; }
 .pro-status-badge {
   display: inline-block; padding: 4px 18px; border-radius: 20px;
@@ -290,7 +290,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .pro-status-free { background: var(--primary-soft); color: var(--primary); }
 .pro-status-pro { background: var(--primary); color: #fff; }
 
-/* ===== 支付区域 ===== */
+/* ===== 闁衡偓椤栨瑧甯涢柛鏍ф惈閻?===== */
 .pro-payment { margin: 16px 0; }
 .pro-payment-hint { font-size: 12px; color: var(--text-secondary); text-align: center; margin-bottom: 12px; }
 .pro-qr-placeholder {
@@ -301,7 +301,7 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .pro-qr-placeholder p { font-size: 14px; color: var(--text); }
 .pro-qr-sub { font-size: 12px !important; color: var(--text-secondary) !important; margin-top: 4px !important; }
 
-/* ===== 激活码输入 ===== */
+/* ===== 婵犵鍋撴繛鑼跺吹閻栨粍娼忛幘鍐插汲 ===== */
 .pro-activation { display: flex; gap: 8px; margin-bottom: 12px; }
 .pro-input {
   flex: 1; padding: 10px 14px; border: 1px solid var(--border);
@@ -320,5 +320,28 @@ html, body { height: 100%; font-family: var(--font); background: var(--bg); colo
 .btn-pro-activate:hover { opacity: 0.9; }
 .btn-pro-activate:disabled { opacity: 0.4; cursor: default; }
 
-/* ===== 已激活 ===== */
+/* ===== 鐎圭寮剁缓鍝劽?===== */
 .pro-activated { text-align: center; padding: 12px; font-size: 14px; color: #4CAF50; font-weight: 500; }
+/* ===== Touch / Mobile 浼樺寲 ===== */
+.template-btn, .emoji-btn, .tool-btn, .style-btn, .spacing-btn, .align-btn, .copy-btn, .btn-icon, .btn-pro, .draft-item {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.template-btn:active, .emoji-btn:active, .tool-btn:active, .style-btn:active, .spacing-btn:active, .align-btn:active {
+  transform: scale(0.95);
+}
+.input-area {
+  -webkit-text-size-adjust: none;
+}
+
+@media (max-height: 700px) {
+  .header-inner { height: 48px; }
+  .panel-header { padding: 8px 14px; }
+  .template-bar { padding: 4px 14px; }
+  .emoji-bar-inner { padding: 4px 14px; }
+  .input-area { min-height: 80px; }
+  .format-toolbar { padding: 4px 14px; }
+  .preview-area { min-height: 80px; }
+  .output-footer { max-height: 150px; }
+  .draft-list { max-height: 60px; }
+}
