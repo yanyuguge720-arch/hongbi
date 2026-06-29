@@ -554,7 +554,7 @@ function checkUsageThen(fn) {
 }
 
 // ===== 激活码 =====
-const ACTIVATION_CODES = { 'TEST-HONGBI':'test', 'PRO-2024-HB':'premium' };
+const ACTIVATION_CODES = { 'HB-3U63-ZG6N': 'premium', 'HB-8LLP-LZZE': 'premium', 'HB-T6Y2-9QA9': 'premium', 'HB-XC6C-LCHL': 'premium', 'HB-UHWG-TBVK': 'premium', 'HB-7EFF-Z4CF': 'premium', 'HB-9F7Z-C9AC': 'premium', 'HB-LX5N-CT3W': 'premium', 'HB-42U5-4JLJ': 'premium', 'HB-BFVV-BV9V': 'premium', 'HB-2R57-6J9M': 'premium', 'HB-9KWW-788D': 'premium', 'HB-CKCY-99CQ': 'premium', 'HB-UPQW-DF3Q': 'premium', 'HB-P9MM-PWRL': 'premium', 'HB-S8VK-NPC4': 'premium', 'HB-9HJR-JAMT': 'premium', 'HB-EEDG-UDAT': 'premium', 'HB-J78X-LMPG': 'premium', 'HB-TS82-DT47': 'premium', 'HB-DMPV-WB8E': 'premium', 'HB-NU8B-KBRF': 'premium', 'HB-Y42G-GEHM': 'premium', 'HB-T3YR-4MGM': 'premium', 'HB-C758-PEW8': 'premium', 'HB-ZUBS-FEXJ': 'premium', 'HB-2S4A-SNQY': 'premium', 'HB-544U-DGC2': 'premium', 'HB-DLZD-7KRL': 'premium', 'HB-7UHN-4R8E': 'premium' };
 function activatePro(code) {
   const u = code.toUpperCase().trim();
   if (ACTIVATION_CODES[u]) { setPro(30); showToast('Pro\u5df2\u6fc0\u6d3b\uff01'); return true; }
