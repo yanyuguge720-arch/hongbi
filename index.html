@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="红笔 - 小红书文案排版工具，一键排版，轻松写出漂亮的笔记">
+  <title>红笔 - 小红书排版工具</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="9" fill="#E84C4C"/>
+            <path d="M18 5 C18 5 14 10 12 15 C10 20 8 24 8 26 C8 28 9 29 10 28.5 C13 27 15 25 18 22 C21 25 23 27 26 28.5 C27 29 28 28 28 26 C28 24 26 20 24 15 C22 10 18 5 18 5Z" fill="white"/>
+            <line x1="18" y1="5" x2="18" y2="20" stroke="#E84C4C" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="18" cy="21" r="1.8" fill="#E84C4C"/>
+            <path d="M13 7 C14 9 14 10 14 11" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+            <path d="M23 7 C22 9 22 10 22 11" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>红笔</h1>
+          <span class="logo-tagline">让你的笔记更好看</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon" id="themeToggle" title="切换深色模式">
+          <span class="icon-moon">🌙</span>
+          <span class="icon-sun" style="display:none">☀️</span>
+        </button>
+        <a href="#" class="btn-pro" id="proBtn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:4px">
+            <path d="M7 1L8.8 5.2L13 5.8L10 8.7L10.7 13L7 10.8L3.3 13L4 8.7L1 5.8L5.2 5.2L7 1Z" fill="white"/>
+          </svg>
+          Pro
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="panel panel-input">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <span class="panel-dot"></span>
+          <h2><span class="panel-emoji">✏️</span> 写文案</h2>
+        </div>
+        <div class="char-area">
+          <span class="char-count" id="charCount">0</span>
+          <span class="char-sep">/</span>
+          <span class="char-max">1000</span>
+          <div class="char-bar-wrap">
+            <div class="char-bar" id="charBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="template-bar" id="templateBar">
+        <span class="template-label">📋 模板</span>
+        <div class="template-list" id="templateList">
+          <button class="template-btn" data-template="recommend">好物推荐</button>
+          <button class="template-btn" data-template="daily">日常分享</button>
+          <button class="template-btn" data-template="tutorial">教程攻略</button>
+          <button class="template-btn" data-template="travel">旅行游记</button>
+          <button class="template-btn" data-template="review">测评对比</button>
+          <button class="template-btn" data-template="fashion">穿搭分享</button>
+          <button class="template-btn" data-template="food">美食打卡</button>
+          <button class="template-btn" data-template="book">读书笔记</button>
+          <button class="template-btn" data-template="tips">干货合集</button>
+        </div>
+      </div>
+
+      <div class="emoji-bar">
+        <div class="emoji-bar-inner">
+          <span class="emoji-bar-label">😊 Emoji</span>
+          <div class="emoji-list">
+            <button class="emoji-btn" data-emoji="❤️">❤️</button>
+            <button class="emoji-btn" data-emoji="🔥">🔥</button>
+            <button class="emoji-btn" data-emoji="✨">✨</button>
+            <button class="emoji-btn" data-emoji="👍">👍</button>
+            <button class="emoji-btn" data-emoji="⭐">⭐</button>
+            <button class="emoji-btn" data-emoji="💪">💪</button>
+            <button class="emoji-btn" data-emoji="🎉">🎉</button>
+            <button class="emoji-btn" data-emoji="😊">😊</button>
+            <button class="emoji-btn" data-emoji="🙏">🙏</button>
+            <button class="emoji-btn" data-emoji="💯">💯</button>
+            <button class="emoji-btn" data-emoji="👀">👀</button>
+            <button class="emoji-btn" data-emoji="📌">📌</button>
+          </div>
+        </div>
+      </div>
+
+      <textarea class="input-area" id="inputArea" placeholder="粘贴或输入你的文案..." spellcheck="false"></textarea>
+      <div class="auto-save-indicator" id="autoSaveIndicator">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="vertical-align:-1px;margin-right:4px"><circle cx="5" cy="5" r="4" fill="#4CAF50"/></svg>
+        已自动保存
+      </div>
+
+      <div class="format-toolbar">
+        <div class="toolbar-group">
+          <button class="tool-btn" id="undoBtn" title="撤销 Ctrl+Z">↩</button>
+          <button class="tool-btn" id="redoBtn" title="重做 Ctrl+Y">↪</button>
+        </div>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <button class="tool-btn" id="boldBtn" title="加粗 **文字**"><b>B</b></button>
+          <button class="tool-btn" id="italicBtn" title="斜体 *文字*"><i>I</i></button>
+          <button class="tool-btn" id="strikeBtn" title="删除线 ~~文字~~"><s>S</s></button>
+        </div>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <button class="tool-btn" id="hashBtn" title="话题标签 #文字"><span class="hash-icon">#</span></button>
+          <button class="tool-btn" id="spacingBtn" title="智能分段 ¶"><span class="pilcrow-icon">¶</span></button>
+          <button class="tool-btn" id="clearFormatBtn" title="清除格式">🧹</button>
+        </div>
+        <div class="toolbar-divider"></div>
+        <div class="toolbar-group">
+          <button class="tool-btn" id="saveDraftBtn" title="保存草稿 Ctrl+S">💾</button>
+          <button class="tool-btn" id="clearBtn" title="清空全部">🗑</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel-output">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <span class="panel-dot panel-dot-out"></span>
+          <h2><span class="panel-emoji">👁️</span> 预览</h2>
+        </div>
+        <button class="copy-btn" id="copyBtn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:5px">
+            <rect x="3" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M1 11V2.5C1 1.67 1.67 1 2.5 1H11" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          复制
+        </button>
+        <button class="copy-btn export-btn" id="exportBtn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="vertical-align:-2px;margin-right:5px">
+            <path d="M7 1L10 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M7 1L4 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M7 1V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M2 8V11.5C2 12.3 2.7 13 3.5 13H10.5C11.3 13 12 12.3 12 11.5V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          导出图片
+        </button>
+      </div>
+
+      <div class="preview-area" id="previewArea">
+        <div class="preview-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="margin-bottom:10px;opacity:0.3">
+            <rect x="4" y="4" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <path d="M12 16H28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 22H28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M12 28H24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>排版效果会显示在这里</span>
+        </div>
+      </div>
+
+      <div class="output-footer">
+        <div class="style-selector">
+          <span class="style-label">🎨 风格</span>
+          <div class="style-options">
+            <button class="style-btn active" data-style="clean"><span class="style-dot" style="background:#E84C4C"></span> 清爽</button>
+            <button class="style-btn" data-style="cute"><span class="style-dot" style="background:#FF6B9D"></span> 可爱</button>
+            <button class="style-btn" data-style="simple"><span class="style-dot" style="background:#666"></span> 极简</button>
+          </div>
+        </div>
+        <div class="spacing-control">
+          <span class="style-label">📏 行距</span>
+          <div class="spacing-options">
+            <button class="spacing-btn" data-spacing="tight">紧凑</button>
+            <button class="spacing-btn active" data-spacing="normal">标准</button>
+            <button class="spacing-btn" data-spacing="loose">宽松</button>
+          </div>
+        </div>
+        <div class="alignment-control">
+          <span class="style-label">📐 对齐</span>
+          <div class="alignment-options">
+            <button class="align-btn active" data-align="left" title="左对齐">⬅</button>
+            <button class="align-btn" data-align="center" title="居中">⬌</button>
+            <button class="align-btn" data-align="right" title="右对齐">➡</button>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <span>字数 <strong id="statChars">0</strong></span>
+          <span class="stats-dot">·</span>
+          <span>段落 <strong id="statParagraphs">0</strong></span>
+          <span class="stats-dot">·</span>
+          <span>阅读 <strong id="statReadTime">0s</strong></span>
+        </div>
+        <div class="draft-section">
+          <div class="draft-header">
+            <span class="style-label">📂 草稿</span>
+            <span class="draft-count" id="draftCount">0 条</span>
+          </div>
+          <div class="draft-list" id="draftList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="modal-overlay" id="proModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>
+          <svg width="20" height="20" viewBox="0 0 14 14" fill="none" style="vertical-align:-3px;margin-right:6px">
+            <path d="M7 1L8.8 5.2L13 5.8L10 8.7L10.7 13L7 10.8L3.3 13L4 8.7L1 5.8L5.2 5.2L7 1Z" fill="#FFD93D"/>
+          </svg>
+          红笔 Pro
+        </h2>
+        <button class="modal-close" id="proModalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="pro-features">
+          <div class="pro-feature"><div class="pro-feature-icon-wrap">🚀</div><div><strong>无限次数排版</strong><p>免费版每天 3 次</p></div></div>
+          <div class="pro-feature"><div class="pro-feature-icon-wrap">🎨</div><div><strong>自定义排版模板</strong><p>保存你的专属风格</p></div></div>
+          <div class="pro-feature"><div class="pro-feature-icon-wrap">📦</div><div><strong>批量排版</strong><p>一次处理多条文案</p></div></div>
+          <div class="pro-feature"><div class="pro-feature-icon-wrap">📜</div><div><strong>排版历史记录</strong><p>随时找回以前的排版</p></div></div>
+        </div>
+        <div class="pro-price"><span class="price">¥19.9</span><span class="period">/ 月</span></div>
+        <button class="btn-pro-subscribe">立即订阅</button>
+        <p class="pro-note">💡 支付功能开发中，敬请期待</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
